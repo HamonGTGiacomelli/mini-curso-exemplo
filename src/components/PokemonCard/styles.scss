@@ -1,0 +1,23 @@
+.pokemonCardWrapper {
+    min-width: 220px;
+    background-color: #4b0082;
+    padding: 16px;
+    border-radius: 16px;
+    .title {
+        border-radius: 8px;
+        background-color: #250040;
+        padding: 4px 0;
+        width: 100%;
+        text-align: center;
+        color: #ffffff;
+    }
+    .imageContainer {
+        display: flex;
+        justify-content: center;
+    }
+    .stats {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 8px;
+    }
+}

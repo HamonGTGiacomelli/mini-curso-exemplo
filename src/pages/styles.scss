@@ -1,0 +1,22 @@
+.homePage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0;
+    .cardsWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 800px;
+        gap: 16px;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .navigationWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+    }
+}

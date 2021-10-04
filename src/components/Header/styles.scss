@@ -1,0 +1,21 @@
+.headerWrapper {
+    display: flex;
+    justify-content: center;
+    background: #212121;
+    max-height: 48px;
+    margin-bottom: 36px;
+    .headerTitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 0;
+        min-width: 800px;
+        min-height: 36px;
+        color: #ffffff;
+        background: #212121;
+        border-radius: 16px;
+        .title {
+            font-size: 36px;
+        }
+    }
+}

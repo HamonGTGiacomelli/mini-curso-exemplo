@@ -1,4 +1,19 @@
 body {
     margin: 0;
-    background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png');
+    background-color: #dddddd;
+    font-family: 'Roboto', sans-serif;
+    // background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png');
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: #4b0082;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 16px;
+    &:disabled {
+        background-color: #8600e6;
+        cursor: initial;
+    }
 }

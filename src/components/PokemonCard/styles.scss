@@ -12,12 +12,22 @@
         color: #ffffff;
     }
     .imageContainer {
+        min-height: 96px;
+        color: #FFFFFF;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     .stats {
         background-color: #ffffff;
         border-radius: 8px;
         padding: 8px;
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 16px;
+            border-radius: 8px;
+            border-bottom: 1px solid;
+        }
     }
 }

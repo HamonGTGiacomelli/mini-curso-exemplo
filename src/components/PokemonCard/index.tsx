@@ -1,6 +1,6 @@
 import {PokemonDetails} from '../../api/types';
 import axios from 'axios';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './styles.scss';
 
 type Props = {
@@ -8,6 +8,8 @@ type Props = {
 };
 
 const PokemonCard: React.FC<Props> = ({pokemon}) => {
+    const [isImageLoading, setIsImageLoading] = useState(true);
+
     useEffect(() => {
         axios.get(``);
     }, []);
@@ -17,9 +19,14 @@ const PokemonCard: React.FC<Props> = ({pokemon}) => {
 
     return (
         <div className="pokemonCardWrapper">
-            <div className="title">{pokemonName}</div>
+            <div className="title">{pokemonName.toUpperCase()}</div>
+
             <div className="imageContainer">
-                <img src={front_default} />
+                <img
+                    src={front_default}
+                    onLoad={() => setIsImageLoading(false)}
+                />
+                {isImageLoading ? <span>Loading...</span> : null}
             </div>
             <div className="stats">
                 {stats.map((status) => {
@@ -27,7 +34,11 @@ const PokemonCard: React.FC<Props> = ({pokemon}) => {
                     const {name: statName} = stat;
                     return (
                         <div
-                            key={`${pokemonName}_${statName}`}>{`${statName} : ${base_stat}`}</div>
+                            className="stat"
+                            key={`${pokemonName}_${statName}`}>
+                            <span>{statName.toUpperCase()}</span>
+                            <span>{base_stat}</span>
+                        </div>
                     );
                 })}
             </div>
